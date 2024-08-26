@@ -27,7 +27,7 @@
 - **AI Recommendations:** Leverage AI-driven insights to improve your prompts and overall system performance. (Coming Soon)
 - **Continuous Updates:** We are constantly adding and updating the providers and models we support, ensuring you always have access to the latest and most advanced AI technology.
 
-## Frosty AI Vocab
+## Frosty AI Terms
 
 ### Organization
 
