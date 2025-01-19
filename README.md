@@ -13,19 +13,22 @@
    - [1. Sign Up](#1-sign-up)
    - [2. Create Workspaces](#2-create-workspaces)
    - [3. Set Up Routers](#3-set-up-routers)
-   - [4. Test in the UI (Optional)](#4-test-in-the-ui-optional)
+   - [4. Test in the UI](#4-test-in-the-ui)
    - [5. Integrate Frosty AI in Your Code](#5-integrate-frosty-ai-in-your-code)
    - [6. Manage & Analyze](#6-manage--analyze)
+4. [Resources](#resources)
 
 ## Introduction
 
-**Frosty AI** is an AI tooling platform that enables seamless integration and management of Large Language Models (LLMs) through a user-friendly web interface. With Frosty AI, you can:
+**Frosty AI** empowers teams to manage, optimize, and scale AI operations effortlessly with multi-LLM routing, advanced analytics, and AI-driven insights—all in one platform. 
+
+With Frosty AI, you can:
 
 - **LLM Routing Interface:** Easily connect, configure, and switch between different LLMs using a web-based UI.
 - **Prompt Management:** Centrally manage your prompts, including versioning and tracking, to maintain consistency and efficiency. (Coming Soon)
 - **Analytics Dashboard:** Log and visualize interactions, success rates, and other key metrics to gain insights into your AI operations.
 - **AI Recommendations:** Leverage AI-driven insights to improve your prompts and overall system performance. (Coming Soon)
-- **Continuous Updates:** We are constantly adding and updating the providers and models we support, ensuring you always have access to the latest and most advanced AI technology.
+- **Continuous Updates:** Our team continuously adds and updates supported providers and models to keep you ahead in AI innovation.
 
 ## Frosty AI Terms
 
@@ -71,32 +74,33 @@ Within the Organization, different teams (e.g., marketing, R&D) create their own
 
 In each Workspace, teams set up **Routers** to connect to various **Providers** depending on their specific needs.
 
-### 4. Test in the UI (Optional)
+### 4. Test in the UI
 
-If you don't want to set Frosty AI up in your code just yet, you can explore and experiment directly in the UI. Navigate to the **Router** page to try different models and prompts to see what works best for your use case. Alternatively, head over to the **Testing** page to compare more than one model at a time, allowing you to make informed decisions before integrating into your codebase.
+If you don't want to set Frosty AI up in your code just yet, you can explore and experiment directly in the UI. Navigate to the **Router** page to compare different models and prompts to see what works best for your use case. Alternatively, head over to the **Testing** page to compare more than one model at a time, allowing you to make informed decisions before integrating into your codebase.
 
 ### 5. Integrate Frosty AI in Your Code
 
 To start using Frosty AI in your Python project, follow the example below:
 
-    ```python
-    # Import Frosty SDK
-    from frosty_ai.frosty import Frosty
+```python
+# Import Frosty SDK
+from frosty_ai.frosty import Frosty
 
-    def main():
-        router_id = [YOUR_ROUTER_ID]
-        router_key = [YOUR_ROUTER_KEY]
+def main():
+    router_id = "[YOUR_ROUTER_ID]"
+    router_key = "[YOUR_ROUTER_KEY]"
 
+    try:
         # Create an instance of the Frosty class
         frosty_sdk = Frosty(router_id, router_key)
 
-        # Make a text generation:
+        # Make a text generation request
         chat_result = frosty_sdk.chat([{
             "role": "user", 
-            "content": 'tell me a 10 word joke about the weather'
+            "content": "tell me a 10-word joke about the weather"
         }])
 
-        # Make an embeddings generation:
+        # Make an embeddings generation request
         embeddings_result = frosty_sdk.embeddings([
             "Embed this sentence.", 
             "As well as this one."
@@ -105,9 +109,19 @@ To start using Frosty AI in your Python project, follow the example below:
         print(f"Text generation result: {chat_result}")
         print(f"Embeddings generation result: {embeddings_result}")
 
-    if __name__ == "__main__":
-        main()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    main()
+```
 
 ### 6. Manage & Analyze
 
-Teams manage their prompts (coming soon), analyze responses, and switch LLM providers seamlessly within their Workspace. Frosty AI’s analytics dashboard provides insights into prompt performance, success rates, and other key metrics, enabling continuous optimization and improvement.
+Teams can analyze responses, and switch LLM providers seamlessly within their Workspace. Frosty AI’s analytics dashboard provides insights into prompt performance, success rates, and other key metrics, enabling continuous optimization and improvement.
+
+## Resources
+
+- [Frosty AI PyPI Package](https://pypi.org/project/frosty-ai/)
+- [Demos and Tutorials](#)
+- [Support](https://github.com/brittmmorris/frosty-ai-docs/issues)
