@@ -84,7 +84,7 @@ To start using Frosty AI in your Python project, follow the example below:
 
 ```python
 # Import Frosty SDK
-from frosty_ai.frosty import Frosty
+from frosty_ai import Frosty
 
 def main():
     router_id = "[YOUR_ROUTER_ID]"
