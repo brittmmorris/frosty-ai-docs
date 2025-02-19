@@ -79,8 +79,13 @@ In each Workspace, teams set up **Routers** to connect to various **Providers** 
 If you don't want to set Frosty AI up in your code just yet, you can explore and experiment directly in the UI. Navigate to the **Router** page to compare different models and prompts to see what works best for your use case. Alternatively, head over to the **Testing** page to compare more than one model at a time, allowing you to make informed decisions before integrating into your codebase.
 
 ### 5. Integrate Frosty AI in Your Code
-
 To start using Frosty AI in your Python project, follow the example below:
+
+#### Install the Frosty AI SDK
+Before integrating Frosty AI into your project, install the SDK using pip:
+
+```bash
+pip install frosty-ai
 
 ```python
 # Import Frosty SDK
