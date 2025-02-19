@@ -86,7 +86,7 @@ Before integrating Frosty AI into your project, install the SDK using pip:
 
 ```bash
 pip install frosty-ai
-
+```
 
 ```python
 # Import Frosty SDK
