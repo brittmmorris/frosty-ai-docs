@@ -106,6 +106,13 @@ def main():
             "content": "tell me a 10-word joke about the weather"
         }])
 
+         # Use a custom routing rule (e.g., "cost", "performance") to select the best model 
+         # based on your configured preferences in the Frosty AI platform.
+         chat_result = frosty_sdk.chat([{
+             "role": "user", 
+             "content": "tell me a 10-word joke about the weather"
+         }], "cost")
+
         # Make an embeddings generation request
         embeddings_result = frosty_sdk.embeddings([
             "Embed this sentence.", 
